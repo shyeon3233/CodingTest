@@ -7,33 +7,22 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
-		FindMinNumber find = new FindMinNumber(scanner.nextLine());
+		FindMinNumber fmn = new FindMinNumber(scanner.nextLine());
 		
 	}
+	
 	
 }
 
 class FindMinNumber{
-	String formula;
-	List<Integer> numbers = new ArrayList<Integer>();
-	List<String> operators = new ArrayList<String>();
-	int result;
+	List<Integer> numArr;
+	List<String> operArr;
 	
-	public FindMinNumber(String formula) {
-		String[] strNumbers = formula.split("[+-]+");
-		int len = strNumbers.length;
-				
-		for(int i=0; i < len; i++) numbers.add(Integer.parseInt(strNumbers[i]));
-		
-		String[] strOperators = formula.split("[0-9]+");
-		len = strOperators.length;
-		System.out.println(Arrays.toString(strOperators));
-		for(int i=0; i < len; i++) operators.add(strOperators[i]);
-		for(int i=0; i < len; i++) System.out.println(numbers.get(i));
-		for(int i=0; i < len; i++) operators.add(strOperators[i]);
-		
-		for(int i=0; i < len; i++) System.out.println(operators.get(i));
+	public FindMinNumber(String cal) {
+		System.out.println(Arrays.toString(cal.split("[+-]")));
 	}
+	
 	
 }
